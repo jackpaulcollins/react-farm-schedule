@@ -1,14 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocationHeader from './LocationHeader';
+import LocationBody from './LocationBody';
 
+const styles = {
+  display: 'flex',
+  flexDirection: 'column',
+  textAlign: 'center',
+  height: '12.5%'
+};
 
 function Location(props){
   return(
-    <div>
-      <h1>{props.day}</h1>
-      <h2>{props.location}</h2>
-      <h3>{props.hours}</h3>
-      <h4>{props.booth}</h4>
+    <div style={styles}>
+      <LocationHeader day={props.day}/>
+      <LocationBody
+        location={props.location}
+        hours={props.hours}
+        booth={props.booth}
+      />
+
+
+
+
     </div>
   );
 }

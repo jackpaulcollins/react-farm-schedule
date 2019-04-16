@@ -271,8 +271,18 @@ const availableProduce = [
 ];
 
 function ProduceList() {
+
+  const styles = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    margin: '20px' 
+
+  };
+
+
   return (
-    <div>
+    <div style={styles}>
       {
         availableProduce.map((month, index) =>
           <Month produce={month.selection}

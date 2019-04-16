@@ -45,9 +45,16 @@ const marketSchedule = [
 
 function LocationList(){
 
+  const styles = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    height: '99vh',
+    width: '25vw',
+    margin: '0px 20px'
+  };
   return(
-    <div>
-      <hr/>
+    <div style={styles}>
       {marketSchedule.map((location, index)=>
         <Location day={location.day}
           location={location.location}

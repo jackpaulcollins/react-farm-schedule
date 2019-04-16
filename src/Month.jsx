@@ -1,15 +1,20 @@
 import React from 'react';
-import Produce from './Produce';
+import MonthHeader from './MonthHeader';
+import MonthBody from './MonthBody';
 import PropTypes from 'prop-types';
 
 function Month(props) {
+  const styles = {
+    width: '30%',
+    marginBottom: '20px'
+
+  };
+
   return (
-    <ul>
-      <h1>{props.month}</h1>
-      {props.produce.map((produceItem, index) =>
-        <Produce name={produceItem}
-          key={index}/>
-      )}
+    <ul style={styles}>
+      <MonthHeader month={props.month}/>
+
+      <MonthBody produce={props.produce}/>
     </ul>
   );
 }
