@@ -1,9 +1,15 @@
 import React from 'react';
-import Test from "./Test";
+import Test from './Test';
+import LocationList from './LocationList';
+import ProduceList from './ProduceList';
 
 function App() {
   return (
-    <Test/>
+    <div>
+      <Test/>
+      <LocationList/>
+      <ProduceList/>
+    </div>
   );
 }
 
